@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DiceRoll" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PokerTableBackground" translatesAutoresizingMaskIntoConstraints="NO" id="P2D-M2-mJa">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sixDie" translatesAutoresizingMaskIntoConstraints="NO" id="xTX-je-zWS" userLabel="firstDice">
+                                <rect key="frame" x="160" y="240" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="aPt-6S-UX5"/>
+                                    <constraint firstAttribute="height" constant="120" id="h9X-PI-BPg"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sixDie" translatesAutoresizingMaskIntoConstraints="NO" id="ocB-jF-kNP" userLabel="secondDice">
+                                <rect key="frame" x="320" y="240" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="1wP-Lc-uRy"/>
+                                    <constraint firstAttribute="width" constant="120" id="rjj-Vn-NRw"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diceRollLogo" translatesAutoresizingMaskIntoConstraints="NO" id="NAw-z4-Kzu">
+                                <rect key="frame" x="125" y="24.5" width="350" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Vxf-hm-4Yc"/>
+                                    <constraint firstAttribute="width" constant="350" id="vIh-1D-TLc"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaR-33-gkX">
+                                <rect key="frame" x="250.5" y="421.5" width="100" height="57"/>
+                                <color key="backgroundColor" red="0.27331885774444009" green="0.27674087462166075" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="feU-cr-g3I"/>
+                                    <constraint firstAttribute="width" constant="100" id="uVj-O4-BkZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="32"/>
+                                <state key="normal" title="Roll"/>
+                                <connections>
+                                    <action selector="clickedRollButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Bc-VH-mSw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="P2D-M2-mJa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9WW-4f-q8d"/>
+                            <constraint firstItem="P2D-M2-mJa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="C0Z-Ks-BqF"/>
+                            <constraint firstAttribute="bottom" secondItem="P2D-M2-mJa" secondAttribute="bottom" id="CRr-gF-pu3"/>
+                            <constraint firstItem="xTX-je-zWS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="Lce-IW-pdz"/>
+                            <constraint firstItem="xTX-je-zWS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QaV-cr-D5E"/>
+                            <constraint firstItem="NAw-z4-Kzu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RhJ-8h-A7g"/>
+                            <constraint firstAttribute="trailing" secondItem="P2D-M2-mJa" secondAttribute="trailing" id="RmQ-Ia-buX"/>
+                            <constraint firstItem="ocB-jF-kNP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="SCj-6F-9iQ"/>
+                            <constraint firstItem="ocB-jF-kNP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="d21-1v-e86"/>
+                            <constraint firstItem="NAw-z4-Kzu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-175" id="gvK-Qw-Mi8"/>
+                            <constraint firstItem="kaR-33-gkX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s9p-4q-SU2"/>
+                            <constraint firstItem="kaR-33-gkX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="150" id="xuH-J3-uPe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="diceRollLabel" destination="NAw-z4-Kzu" id="aVs-hB-Yd8"/>
+                        <outlet property="firstDice" destination="xTX-je-zWS" id="XcV-4E-VxK"/>
+                        <outlet property="rollButton" destination="kaR-33-gkX" id="67R-1C-LgE"/>
+                        <outlet property="secondDice" destination="ocB-jF-kNP" id="oWH-rd-mH3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="314"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="PokerTableBackground" width="682" height="512"/>
+        <image name="diceRollLogo" width="682" height="512"/>
+        <image name="sixDie" width="341" height="341"/>
+    </resources>
+</document>
